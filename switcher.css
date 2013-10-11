@@ -56,6 +56,57 @@ video {
   width: 25%;
   height: 25%;
 }
+.stream-17 video,
+.stream-18 video,
+.stream-19 video,
+.stream-20 video {
+  width: 20%;
+  height: 25%;
+}
+.stream-21 video,
+.stream-22 video,
+.stream-23 video,
+.stream-24 video,
+.stream-25 video {
+  width: 20%;
+  height: 20%;
+}
+.stream-26 video,
+.stream-27 video,
+.stream-28 video,
+.stream-29 video,
+.stream-30 video {
+  width: 16.666667%;
+  height: 20%;
+}
+.stream-31 video,
+.stream-32 video,
+.stream-33 video,
+.stream-34 video,
+.stream-35 video,
+.stream-36 video {
+  width: 16.666667%;
+  height: 16.666667%;
+}
+.stream-37 video,
+.stream-38 video,
+.stream-39 video,
+.stream-40 video,
+.stream-41 video,
+.stream-42 video {
+  width: 14.285714%;
+  height: 16.666667%;
+}
+.stream-43 video,
+.stream-44 video,
+.stream-45 video,
+.stream-46 video,
+.stream-47 video,
+.stream-48 video,
+stream-49 video {
+  width: 14.285714%;
+  height: 14.285714%;
+}
 #buttons {
   position: absolute;
   width: 100%;

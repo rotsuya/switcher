@@ -1409,6 +1409,31 @@
 
     util.inherits(Peer, EventEmitter);
 
+    Peer.prototype.allId = function(cb) {
+        var self = this;
+        var http = new XMLHttpRequest();
+        var protocol = this.options.secure ? 'https://' : 'http://';
+        var url = protocol + this.options.host + ':' + this.options.port + '/' + this.options.key + '/all';
+
+        // If there's no ID we need to wait for one before trying to init socket.
+        http.open('get', url, true);
+        http.onerror = function(e) {
+            util.error('Error get all IDs', e);
+            self._abort('server-error', 'Could not get all IDs from the server');
+        }
+        http.onreadystatechange = function() {
+            if (http.readyState !== 4) {
+                return;
+            }
+            if (http.status !== 200) {
+                http.onerror();
+                return;
+            }
+            cb(JSON.parse(http.responseText));
+        };
+        http.send(null);
+    };
+
     /** Get a unique ID from the server via XHR. */
     Peer.prototype._retrieveId = function(cb) {
         var self = this;

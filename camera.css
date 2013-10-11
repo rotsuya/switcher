@@ -37,3 +37,31 @@ button {
 .disconnected #init-camera {
   display: inline;
 }
+#status {
+  color: red;
+  font-size: 18px;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  -webkit-animation: flash 2s linear 0s infinite normal none;
+}
+.disconnected #status {
+  display: none;
+}
+.connected #status {
+  display: block;
+}
+@-webkit-keyframes flash {
+  0% {
+    color: red;
+  }
+  49% {
+    color: red;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: transparent;
+  }
+}
