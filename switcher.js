@@ -1,5 +1,5 @@
 // PeerJS object
-var peer = new Peer('switcher', { key: 'peerjs', debug: 3, host: '192.168.40.81', port: '9000', 'iceServers': []});
+var peer = new Peer('switcher', { key: 'peerjs', debug: 3, host: location.host, port: '9000', 'iceServers': []});
 var existingCalls = {};
 
 peer.on('open', function(){

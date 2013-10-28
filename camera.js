@@ -11,7 +11,7 @@ navigator.getUserMedia({
 
     function connect () {
         console.log('camera.js: connecting...');
-        window.peer = new Peer({ key: 'peerjs', debug: 3, host: '192.168.40.81', port: '9000', 'iceServers': []});
+        window.peer = new Peer({ key: 'peerjs', debug: 3, host: location.host, port: '9000', 'iceServers': []});
 
         peer.on('open', function(){
             console.log('camera.js: peer ID is ' + peer.id);
