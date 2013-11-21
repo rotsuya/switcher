@@ -1,18 +1,9 @@
 // PeerJS object
-var peer = new Peer('switcher', { key: 'peerjs', debug: 3, host: location.host, port: '9000', 'iceServers': []});
+var peer = new Peer('switcher1', { key: '2vgt0cd66bikke29', debug: 3, 'iceServers': []});
 var existingCalls = {};
 
 peer.on('open', function(){
     console.log('switcher.js: my ID is ' + peer.id);
-    window.interval = setInterval(function() {
-        peer.allId(function(remoteIds) {
-            console.log('switcher.js: all remote IDs are ' + remoteIds);
-            console.log('switcher.js: all connected remote IDs are ' + Object.keys(existingCalls))
-        })
-    }, 5000);
-    $(window).on('unload', function() {
-        clearInterval(interval);
-    });
 });
 
 // Receiving a call

@@ -11,7 +11,7 @@ navigator.getUserMedia({
 
     function connect () {
         console.log('camera.js: connecting...');
-        window.peer = new Peer({ key: 'peerjs', debug: 3, host: location.host, port: '9000', 'iceServers': []});
+        window.peer = new Peer({ key: '2vgt0cd66bikke29', debug: 3, 'iceServers': []});
 
         peer.on('open', function(){
             console.log('camera.js: peer ID is ' + peer.id);
@@ -20,7 +20,7 @@ navigator.getUserMedia({
 
             window.peerCall = function () {
                 console.log('camera.js: calling...');
-                mediaConnection = peer.call('switcher', window.localStream);
+                mediaConnection = peer.call('switcher1', window.localStream);
                 $('html').removeClass('connected disconnected').addClass('connected');
             }
 
